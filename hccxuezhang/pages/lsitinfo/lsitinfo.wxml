@@ -1,0 +1,42 @@
+<view class='container'>
+  <view class='info-title'>
+    <text>{{map.data[idx].title}}</text>
+  </view>
+  <!-- 地图 -->
+  <view class='info-mian'>
+    <view class='info-mian-title'>
+      <text>地图</text>
+    </view>
+    <map id="map" longitude="{{map.data[idx].location.lng}}" latitude="{{map.data[idx].location.lat}}" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}"  show-location='true' ></map>
+  </view>
+  <!-- 地址 -->
+  <view class='info-mian'>
+    <view class='info-mian-title'>
+      <text>地址（点击导航）</text>
+    </view>
+    <view class='info-mian-cont'>
+      <text bindtap='bindmap'>{{map.data[idx].address}}</text>
+    </view>
+  </view>
+  <!-- 电话 -->
+  <view class='info-mian'>
+    <view class='info-mian-title'>
+      <text>电话（点击呼叫）</text>
+    </view>
+    <view class='info-mian-cont' wx:if='{{map.data[idx].tel}}'>
+      <text bindtap='bintel'>{{map.data[idx].tel}}</text>
+    </view>
+    <view class='info-mian-cont' wx:else>
+      <text>暂无联系电话</text>
+    </view>
+  </view>
+  <!-- 类型 -->
+  <view class='info-mian'>
+    <view class='info-mian-title'>
+      <text>类型</text>
+    </view>
+    <view class='info-mian-cont'>
+      <text>{{map.data[idx].category}}</text>
+    </view>
+  </view>
+</view>

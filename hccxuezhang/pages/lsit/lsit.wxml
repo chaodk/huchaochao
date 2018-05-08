@@ -1,0 +1,14 @@
+<view class='container'>
+   <view wx:if='{{map.data.length>0}}' class='list-heard mingshi-name'>
+    <text>搜索"{{seainfo}}"结果</text>
+  </view>
+  <!-- 搜索列表 -->
+  <view class='list-li'>
+    <block wx:for='{{map.data}}'>
+      <view class='lsit-item' bindtap='bindlistinfo' data-index='{{index}}'>
+        <text class='lsit-item-left mingshi-name'>{{item.title}}</text>
+        <image class='lsit-item-right' src='/imges/icon/right.png'></image>
+      </view>
+      </block>
+  </view>
+</view>

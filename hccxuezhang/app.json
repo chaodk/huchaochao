@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/nj/nj",
+    "pages/phone/phone",
+    "pages/gps/gps",
+    "pages/lsitinfo/lsitinfo",
+    "pages/lsit/lsit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor":"#FFEE9B",
+    "navigationBarTitleText": "胡超超学长",
+    "navigationBarTextStyle":"black"
+  }
+}

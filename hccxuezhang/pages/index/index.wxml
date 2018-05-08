@@ -1,0 +1,33 @@
+<view class='container'>
+  <!-- 搜索框 -->
+  <form bindsubmit="formSubmit">
+    <view class='m-sea'>
+      <input placeholder-class='seainput' type='text' confirm-type='search' bindconfirm='inpusea' name='seainfo' placeholder='搜索周边，比如：“酒店” “餐饮”等等'></input>
+      <button form-type="submit" hover-class='subhover'>GO</button>
+    </view>
+  </form>
+  <!-- 快捷菜单 -->
+  <view class='muen'>
+    <block wx:for='{{muen}}'>
+      <view class='muen-item' bindtap='bindkey' data-datakey='{{item.title}}'>
+        <image src='{{item.icon}}'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 工具 -->
+  <view class='muen'>
+    <text class='tool_title'>工具箱</text>
+    <block wx:for='{{tool}}'>
+      <navigator class='muen-item' url='{{item.url}}'>
+        <image src='{{item.img}}'></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </block>
+  </view>
+  <!-- 更多功能 -->
+  <view class='tips'>
+    <image mode='widthFix' src='/imges/hcc.jpg'></image>
+    <text>更多功能待开放中</text>
+  </view>
+</view>

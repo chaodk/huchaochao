@@ -1,0 +1,24 @@
+<view class='container'>
+    <text bindtap='bindgsp' class='col'>点击选择地点</text>
+    <view wx:if='{{gps.length==0}}' class='list_nomian'>
+       <text class='list_main_no'>暂无数据</text>
+    </view>
+    <view class='list_main' wx:else>
+      <view class='list_item mingshi-name' >
+        <text>名称：</text>
+        <text class='list_item_blue' selectable>{{gps.name}}</text>
+      </view>
+      <view class='list_item mingshi-name'>
+        <text>地址：</text>
+        <text class='list_item_blue' selectable>{{gps.address}}</text>
+      </view>
+      <view class='list_item mingshi-name'>
+        <text>经度：</text>
+        <text class='list_item_blue' selectable>{{gps.latitude}}</text>
+      </view>
+      <view class='list_item mingshi-name'>
+        <text>纬度：</text>
+        <text class='list_item_blue' selectable>{{gps.longitude}}</text>
+      </view>
+    </view>
+</view>
